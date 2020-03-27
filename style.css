@@ -157,7 +157,7 @@ p {
 	padding: 0px;
 	float: left;
 	overflow: hidden;
-	box-shadow: 0 0 0 0 rgba(0,196,213,0);
+	box-shadow: 0 0 0 0px rgba(0,196,213,0);
 	transition: all 0.3s ease;
 }
 
@@ -194,6 +194,11 @@ p {
 	transition: all 0.1s ease;
 }
 
+.card.live:hover {
+	box-shadow: 0 0 0 3px rgba(255,0,97,1);
+	transition: all 0.1s ease;
+}
+
 .card.title:hover {
 	box-shadow: none;
 }
@@ -216,12 +221,17 @@ p {
 	padding: 0;
 }
 
+.card.live h3, .card.live .meta, .card.live a {
+	color: #ff0061;
+}
+
 .card .meta {
 	position: absolute;
 	bottom: 10px;
 	width: 100%;
 	color: #00C4D5;
 }
+
 
 /* Badges */
 .badge-live {
