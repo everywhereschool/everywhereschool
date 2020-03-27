@@ -17,7 +17,7 @@ html {
   background: #19484C;
   font-size: 16px;
   line-height: 24px;
-  font-family: sans-serif;
+  font-family: Nunito, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -190,7 +190,8 @@ p {
 	color: #00C4D5;
 }
 
-.card.live::after {
+/* Badges */
+.badge-live {
 	display: block;
 	width: 80px;
 	height: 80px;
@@ -204,8 +205,16 @@ p {
    Mobile Classes
    ========================================================================== */
 
-@media (max-width: 631px) {
-	
+@media (max-width: 960px) {
+	.content {
+		width: 640px;
+	}
+}
+
+@media (max-width: 640px) {
+	.content {
+		width: 320px;
+	}
 }
    
 
