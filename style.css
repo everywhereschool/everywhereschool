@@ -14,7 +14,8 @@
 
 html {
   color: #fff;
-  font-size: 18px;
+  background: #19484C;
+  font-size: 16px;
   line-height: 24px;
   font-family: sans-serif;
   margin: 0;
@@ -96,79 +97,75 @@ html {
 }
 
 /* ==========================================================================
-   Base Layout
+   Page Layout
    ========================================================================== */
 
-/* Columns - content blocks used within sections */
-
-.column {
-	padding: 0 15px;
-	float: left;
+.content {
+	width: 960px;
+	max-width: 100%;
+	text-align: center;
+	margin: 0 auto;
 }
 
-/* Spacer - used for creating space on desktop, but which collapse on mobile */
 
-.spacer {
-	float: left;
+/* ==========================================================================
+   Site Styles
+   ========================================================================== */
+
+a {
+	color: #00C4D5;
+	text-decoration: none;
 }
 
-/* Column widths - use these to determine column size as a fraction of the container width */
+.card {
+	display: inline-block;
+	text-align: center; 
+	width: 300px;
+	height: 350px;
+	max-height: 100%;
+	background: #fff;
+	color: #333;
+	border-radius: 20px;
+	
+	margin: 10px;
+	padding: 0px;
+	float: left;
+	overflow: hidden;
+}
 
-.column.full, .spacer.full {
+/* Title Card */
+
+.card.title {
+	background: #072F33;
+	padding: 20px;
+}
+
+.card.title h1 {
+	color: #fff;
+	font-size: 35px;
+	line-height: 35px;
+	font-weight: 800;
+	margin: 0;
+	padding: 0;
+}
+
+.card.title h2 {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+/* Stream Card */
+
+.card-image {
+	display: block;
+	background: #eee;
+	background-image: url("images/example.jpg") no-repeat top left;
+	background-size: cover;
 	width: 100%;
+	height: 190px;
+	
 }
-
-.column.two-thirds, .spacer.two-thirds {
-	width: 66.6666666666%;
-}
-
-.column.half, .spacer.half {
-	width: 50%;
-}
-
-.column.third, .spacer.third {
-	width: 33.3333333333%;
-}
-
-.column.quarter, .spacer.quarter {
-	width: 25%;
-}
-
-.column.fifth, .spacer.fifth {
-	width: 20%;
-}
-
-.column.two-fifths, .spacer.two-fifths {
-	width: 40%;
-}
-
-.column.three-fifths, .spacer.three-fifths {
-	width: 60%;
-}
-
-.column.three-quarters, .spacer.three-quarters {
-	width: 75%;
-}
-
-.column.four-fifths, .spacer.four-fifths {
-	width: 80%;
-}
-
-.column.sixth, .spacer.sixth {
-	width: 16.6666666666%;
-}
-
-.column.eigth, .spacer.eigth, .column.eighth, .spacer.eighth {
-	width: 12.5%;
-}
-
-.note {
-	padding: 15px 30px;
-	background: #D9F3EB;
-	color: #00B078;
-	border-radius: 12px;
-}
-
 
 
 /* ==========================================================================
