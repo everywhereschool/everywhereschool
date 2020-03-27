@@ -101,12 +101,24 @@ html {
 /* ==========================================================================
    Page Layout
    ========================================================================== */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
 
 .content {
 	width: 1280px;
 	max-width: 100%;
 	text-align: center;
 	margin: 0 auto;
+}
+
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center
 }
 
 @media (max-width: 1280px) {
