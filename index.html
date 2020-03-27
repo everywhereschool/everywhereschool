@@ -24,9 +24,9 @@
 
 		{% for stream in streams.items %}
 		<a href="{{ stream.link }}">
-			<div class="card">
-				<div class="card-image"><br></div>
-				<div class="card-date">{{ stream.startTime }}</div>
+			<div class="card"> <!-- Add class "soon" for upcoming streams, "live" for live streams -->
+				<div class="card-image" style="background-image: url({{ stream.photo.0.url }});"><br></div>
+				<div class="card-date">{{ stream.startTime }}</div><!-- TODO: human readable, use correct time zone -->
 				<h3>{{ stream.name }}</h3>
 				<p>By <a href="{{ stream.creatorLink }}">{{ stream.creatorName }}</a>{% if stream.platform %} on {{ stream.platform }}{% endif %}</p>
 				<div class="meta">
@@ -39,43 +39,6 @@
 			</div>
 		</a>
 		{% endfor %}
-
-		<a href="link">
-			<div class="card live">
-				<div class="card-image"><br></div>
-				<div class="card-date">Fri March 27 at 2:30 ET</div>
-				<h3>Intro to Chess</h3>
-				<p>By <a href="educator-link">Freddie</a> on YouTube</p>
-				<div class="meta">Science • Ages 5-12</div>
-				<div class="badge-live"><br></div>
-				<div class="badge-soon"><br></div>
-			</div>
-		</a>
-		
-		<a href="link">
-			<div class="card soon">
-				<div class="card-image"><br></div>
-				<div class="card-date">Fri March 27 at 2:30 ET</div>
-				<h3>Intro to Chess</h3>
-				
-				<p>By <a href="educator-link">Freddie</a> on YouTube</p>
-				<div class="meta">Science • Ages 5-12</div>
-				<div class="badge-live"><br></div>
-				<div class="badge-soon"><br></div>
-			</div>
-		</a>
-		
-		<a href="link">
-			<div class="card">
-				<div class="card-image"><br></div>
-				<div class="card-date">Fri March 27 at 2:30 ET</div>
-				<h3>Intro to Chess</h3>
-				<p>By <a href="educator-link">Freddie</a> on YouTube</p>
-				<div class="meta">Science • Ages 5-12</div>
-				<div class="badge-live"><br></div>
-				<div class="badge-soon"><br></div>
-			</div>
-		</a>
 	</div>
 	<footer>
 		<p>Powered by <a rel="external" href="https://netlify.com">Netlify</a></p>

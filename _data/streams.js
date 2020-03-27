@@ -36,6 +36,7 @@ require('dotenv').config()
 	            records.forEach(function(record) {
 	                const name = record.get('Name');
                     const link = record.get('Link');
+                    const photo = record.get('Photo');
 	                const startTime = record.get('Start Time');
                     const endTime = record.get('End Time');
                     const creatorName = record.get('Creator Name');
@@ -43,7 +44,7 @@ require('dotenv').config()
                     const platform = record.get('Platform') || getPlatform(link);
                     const subject = record.get('Subject');
                     const ageRange = record.get('Age Range');
-	                streams.push({name, link, startTime, endTime, creatorName, creatorLink, platform, subject, ageRange});
+	                streams.push({name, link, photo, startTime, endTime, creatorName, creatorLink, platform, subject, ageRange});
 	            });
 	            fetchNextPage();
 	            resolve({items: streams.sort(compareStreams)});
