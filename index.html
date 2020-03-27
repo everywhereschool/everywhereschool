@@ -7,8 +7,8 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'  type='text/css'>
-	<link rel="stylesheet" href="normalize.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/normalize.css">
+	<link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -21,7 +21,31 @@
 			<a href="about.html">About Us</a><br>
 			<a href="submit.html">Submit a Stream</a>
 		</div>
-		
+
+		{% for stream in streams.items %}
+		<a href="{{ stream.link }}">
+			<div class="card">
+				<div class="card-image"><br></div>
+				<div class="card-date">{{ stream.startTime }}</div>
+				<h3>{{ stream.name }}</h3>
+				{% if stream.creatorName and stream.creatorLink %}
+				<p>By <a href="{{ stream.creatorLink }}">{{ stream.creatorName }}</a>{% if stream.platform %} on {{ stream.platform }}{% endif %}</p>
+				{% else if stream.creatorName %}
+				<p>By {{ stream.creatorName }}{% if stream.platform %} on {{ stream.platform }}{% endif %}</p>
+				{% endif %}
+				{% if stream.subject or stream.ageRange %}
+				<div class="meta">
+					{% if stream.subject %}<span class="subject">{{ stream.subject }}</span>{% endif %}
+					{% if stream.subject and stream.ageRange %}<span class="separator"> • </span>{% endif %}
+					{% if stream.ageRange %}<span class="age-range">Ages {{ stream.ageRange }}</span>{% endif %}
+				</div>
+				{% endif %}
+				<div class="badge-live"><br></div>
+				<div class="badge-soon"><br></div>
+			</div>
+		</a>
+		{% endfor %}
+
 		<a href="link">
 			<div class="card live">
 				<div class="card-image"><br></div>

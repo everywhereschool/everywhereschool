@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/greatislander/everywhereschool#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.10.0",
+    "airtable": "^0.8.1",
+    "dotenv": "^8.2.0"
   }
 }
