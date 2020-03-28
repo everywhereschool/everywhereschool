@@ -1,0 +1,19 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+{% for stream in streams.items %}
+    <article class="card"> <!-- Add class "soon" for upcoming streams, "live" for live streams -->
+        <div class="card-image" style="background-image: url({{ stream.photo[0].url }});"><br></div>
+        <div class="card-date">{{ stream.startTime }}</div><!-- TODO: human readable, use correct time zone -->
+        <h2><a rel="external" href="{{ stream.link }}">{{ stream.name }}</a></h2>
+        <p>By <a rel="external" href="{{ stream.creatorLink }}">{{ stream.creatorName }}</a>{% if stream.platform %} on {{ stream.platform }}{% endif %}</p>
+        <div class="meta">
+            <span class="subject">{{ stream.subject }}</span>
+            <span class="separator"> • </span>
+            <span class="age-range">Ages {{ stream.ageRange }}</span>
+        </div>
+        <div class="badge-live"><br></div>
+        <div class="badge-soon"><br></div>
+    </article>
+{% endfor %}
+{% endblock %}

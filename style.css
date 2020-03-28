@@ -11,10 +11,9 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-
 html {
   color: #fff;
-  background: #19484C;
+  background: #19484c;
   font-size: 16px;
   line-height: 24px;
   font-family: Nunito, sans-serif;
@@ -33,13 +32,13 @@ html {
  */
 
 ::-moz-selection {
-  background: #00C4D5;
+  background: #00c4d5;
   color: #fff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #00C4D5;
+  background: #00c4d5;
   color: #fff;
   text-shadow: none;
 }
@@ -82,10 +81,11 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-
 
 /* ==========================================================================
    Browser Upgrade Prompt
@@ -108,206 +108,219 @@ body {
   min-height: 100vh;
 }
 
-.content {
-	width: 1280px;
-	max-width: 100%;
-	text-align: center;
-	margin: 0 auto;
+.container {
+  width: 1280px;
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 footer {
   margin-top: auto;
   padding: 1rem;
-  text-align: center
+  text-align: center;
 }
 
 @media (max-width: 1280px) {
-	.content {
-		width: 960px;
-	}
+  .container {
+    width: 960px;
+  }
 }
 
 @media (max-width: 960px) {
-	.content {
-		width: 640px;
-	}
+  .container {
+    width: 640px;
+  }
 }
 
 @media (max-width: 640px) {
-	.content {
-		width: 320px;
-	}
+  .container {
+    width: 320px;
+  }
 }
 
 .text-content {
-	width: 940px;
-	max-width: 100%;
-	background: #072F33;
-	border-radius: 20px;
-	margin: 10px;
-	padding: 20px;
-	text-align: left;
-	float: right;
+  width: 940px;
+  max-width: 100%;
+  background: #072f33;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 20px;
+  text-align: left;
+  float: right;
 }
 
 .text-content p {
-	margin: 0 0 15px;
+  margin: 0 0 15px;
 }
 
-.text-content h1, .text-content h3 {
-	margin: 0 0 15px;
-	padding: 0;
-	color: #00C4D5;
+.text-content h1,
+.text-content h2 {
+  margin: 0 0 15px;
+  padding: 0;
+  color: #00c4d5;
 }
 
-.text-content h3 {
-	margin: 0 0 5px;
+.text-content h2 {
+  margin: 0 0 5px;
 }
-
 
 /* ==========================================================================
    Site Styles
    ========================================================================== */
 
 a {
-	color: #00C4D5;
-	text-decoration: none;
+  color: #00c4d5;
+  text-decoration: none;
 }
 
 p {
-	margin: 0 0 10px;
-	padding: 0;
+  margin: 0 0 10px;
+  padding: 0;
 }
 
 .card {
-	display: inline-block;
-	text-align: center; 
-	position: relative;
-	width: 300px;
-	height: 350px;
-	max-height: 100%;
-	background: #fff;
-	color: #333;
-	border-radius: 20px;
-	
-	margin: 10px;
-	padding: 0px;
-	float: left;
-	overflow: hidden;
-	box-shadow: 0 0 0 0px rgba(0,196,213,0);
-	transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  width: 300px;
+  height: 350px;
+  max-height: 100%;
+  background: #fff;
+  color: #333;
+  border-radius: 20px;
+
+  margin: 10px;
+  padding: 0px;
+  float: left;
+  overflow: hidden;
+  box-shadow: 0 0 0 0px rgba(0, 196, 213, 0);
+  transition: all 0.3s ease;
 }
 
 /* Title Card */
 
 .card.title {
-	background: #072F33;
-	padding: 20px;
+  background: #072f33;
+  padding: 20px;
 }
 
-.card.title h1 {
-	color: #fff;
-	font-size: 35px;
-	line-height: 35px;
-	font-weight: 800;
-	margin: 0;
-	padding: 0;
+.card.title .brand {
+  color: #fff;
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
 }
 
-.card.title h2 {
-	color: #fff;
-	font-size: 16px;
-	font-weight: 300;
+.card.title .subhead {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.card.title .subhead em {
+  color: #ff0061;
+  font-style: normal;
+  font-weight: 800;
 }
 
 .card.title a:hover {
-	color: #FF0061;
+  color: #ff0061;
 }
 
 /* Stream Card */
 
 .card:hover {
-	box-shadow: 0 0 0 3px rgba(0,196,213,1);
-	transition: all 0.1s ease;
+  box-shadow: 0 0 0 3px rgba(0, 196, 213, 1);
+  transition: all 0.1s ease;
 }
 
 .card.live:hover {
-	box-shadow: 0 0 0 3px rgba(255,0,97,1);
-	transition: all 0.1s ease;
+  box-shadow: 0 0 0 3px rgba(255, 0, 97, 1);
+  transition: all 0.1s ease;
 }
 
 .card.title:hover {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 .card-image {
-	display: block;
-	background: #eee;
-	background: url(images/example.jpg) no-repeat center center;
-	background-size: cover;
-	width: 100%;
-	height: 190px;
+  display: block;
+  background: #eee;
+  background: url(images/example.jpg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 190px;
 }
 
-.card h3 {
-	font-size: 25px;
-	line-height: 27px;
-	font-weight: 800;
-	color: #00C4D5;
-	margin: 10px 0 0;
-	padding: 0;
+.card h2 {
+  font-size: 25px;
+  line-height: 27px;
+  font-weight: 800;
+  color: #00c4d5;
+  margin: 10px 0 0;
+  padding: 0;
 }
 
-.card.live h3, .card.live .meta, .card.live a {
-	color: #ff0061;
+.card.live h3,
+.card.live .meta,
+.card.live a {
+  color: #ff0061;
 }
 
 .card .meta {
-	position: absolute;
-	bottom: 10px;
-	width: 100%;
-	color: #00C4D5;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  color: #00c4d5;
 }
-
 
 /* Badges */
 .badge-live {
-	display: block;
-	width: 80px;
-	height: 80px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	background: url(images/badge-live.svg) no-repeat top left;
-	opacity: 0;
+  display: block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(images/badge-live.svg) no-repeat top left;
+  opacity: 0;
 }
 
 .badge-soon {
-	display: block;
-	width: 80px;
-	height: 80px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	background: url(images/badge-soon.svg) no-repeat top left;
-	opacity: 0;
+  display: block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(images/badge-soon.svg) no-repeat top left;
+  opacity: 0;
 }
 
 .card.live .badge-live {
-	opacity: 1;
-	animation: pulse 2s infinite;
+  opacity: 1;
+  animation: pulse 2s infinite;
 }
 
 .card.soon .badge-soon {
-	opacity: 1;
+  opacity: 1;
 }
 
 @keyframes pulse {
-  0% 	{ opacity: 0; }
-  50% 	{ opacity: 1; }
-  100% 	{ opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-   
 
 /* ==========================================================================
    Helper classes
@@ -392,8 +405,6 @@ p {
   clear: both;
 }
 
-
-
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -458,4 +469,3 @@ p {
     page-break-after: avoid;
   }
 }
-

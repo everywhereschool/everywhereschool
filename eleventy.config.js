@@ -1,4 +1,11 @@
+const format = require('date-fns/format');
+
 module.exports = eleventyConfig => {
+
+    eleventyConfig.addFilter('formatAndLocalizeDateTime', function(dateTime) { 
+        return format(new Date(dateTime), 'PPPppp');
+    });
+
     eleventyConfig.addPassthroughCopy('browserconfig.xml');
     eleventyConfig.addPassthroughCopy('humans.txt');
     eleventyConfig.addPassthroughCopy('images');
