@@ -182,6 +182,8 @@ footer {
 
 .text-content p {
   margin: 0 0 15px;
+  font-size: 20px;
+  line-height: 26px;
 }
 
 .text-content h1 {
