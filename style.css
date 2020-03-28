@@ -170,29 +170,29 @@ footer {
 }
 
 .text-content {
-  width: 940px;
+  width: 640px;
   max-width: 100%;
   background: #072f33;
   border-radius: 20px;
   margin: 10px;
   padding: 20px;
   text-align: left;
-  float: right;
+  float: left;
 }
 
 .text-content p {
   margin: 0 0 15px;
 }
 
-.text-content h1,
-.text-content h2 {
+.text-content h1 {
   margin: 0 0 15px;
-  padding: 0;
-  color: #00c4d5;
+  line-height: 34px;
 }
 
 .text-content h2 {
   margin: 0 0 5px;
+  padding: 0;
+  color: #00c4d5;
 }
 
 /* ==========================================================================
