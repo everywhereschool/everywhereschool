@@ -8,6 +8,7 @@ module.exports = eleventyConfig => {
 
     eleventyConfig.addPassthroughCopy('browserconfig.xml');
     eleventyConfig.addPassthroughCopy('humans.txt');
+    eleventyConfig.addPassthroughCopy('fonts');
     eleventyConfig.addPassthroughCopy('images');
     eleventyConfig.addPassthroughCopy('normalize.css');
     eleventyConfig.addPassthroughCopy('robots.txt');

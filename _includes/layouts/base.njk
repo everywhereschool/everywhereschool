@@ -6,16 +6,16 @@
 	<title>{% if page.url !== '/' %}{{ title }} | {% endif %}Everywhere School</title>
 	<meta name="description" content="{{ site.description }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'  type='text/css'>
 	<link rel="stylesheet" href="/normalize.css">
 	<link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="card title">
+        <header role="banner" class="card title">
             <a href="/">
-                <img src="/images/logo.svg">
+                <img src="/images/logo.svg" alt="" />
+                <span class="sr-only">Everywhere School</span>
             </a>
             {% set brandTag = 'h1' %}
             {% if page.url !== '/' %}
@@ -24,9 +24,11 @@
             <{{ brandTag }} class="brand">Everywhere School</{{ brandTag }}>
             <p class="subhead">Online <em>live</em> education for kids during the Covid-19 pandemic</p>
             {% include 'partials/navigation.njk' %}
-        </div>
+        </header>
+        <main>
         {% block content %}
         {% endblock content %}
+        </main>
     </div>
     {% include 'partials/footer.njk' %}
 </body>
