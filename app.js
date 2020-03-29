@@ -10,12 +10,15 @@ if (streams.length > 0) {
         date.innerText = formattedStartTime;
         if (isPast(new Date(endTime))) { // Stream end time is in the past.
             stream.dataset.status = 'done';
+            stream.querySelector('.badge .label').innerText = 'done';
         }
         if (isAfter(new Date(startTime), new Date()) && isBefore(new Date(startTime), addHours(new Date(), 1))) { // Stream start time is within the next hour.
             stream.dataset.status = 'soon';
+            stream.querySelector('.badge .label').innerText = 'soon';
         }
         if (isAfter(new Date(), new Date(startTime)) && isBefore(new Date(), new Date(endTime))) { // Stream is live.
             stream.dataset.status = 'live';
+            stream.querySelector('.badge .label').innerText = 'live';
         }
     });
 }
