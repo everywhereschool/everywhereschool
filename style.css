@@ -254,7 +254,7 @@ p {
 }
 
 .card.title .subhead em {
-  color: #ff0061;
+  color: #FF5193;
   font-style: normal;
   font-weight: 800;
 }
@@ -296,8 +296,8 @@ p {
   font-size: 25px;
   line-height: 27px;
   font-weight: 800;
-  color: #00c4d5;
-  margin: 10px 0 0;
+  color: #009AA7;
+  margin: 10px 10px 0;
   padding: 0;
 }
 
@@ -311,7 +311,7 @@ p {
   position: absolute;
   bottom: 10px;
   width: 100%;
-  color: #00c4d5;
+  color: #009AA7;
 }
 
 /* Badges */
