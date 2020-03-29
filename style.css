@@ -142,7 +142,7 @@ body {
   width: 1280px;
   max-width: 100%;
   text-align: center;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 footer {
@@ -263,8 +263,12 @@ p {
   font-weight: 800;
 }
 
+.card.title a {
+  color: #00C4D5;
+}
+
 .card.title a:hover {
-  color: #ff0061;
+  color: #FF5193;
 }
 
 /* Stream Card */
@@ -288,6 +292,10 @@ p {
   background: #eee;
   width: 100%;
   height: 190px;
+}
+
+.card-date {
+	margin: 5px 10px 0;
 }
 
 .card-image img {
