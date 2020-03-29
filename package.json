@@ -31,8 +31,7 @@
   },
   "homepage": "https://github.com/greatislander/everywhereschool#readme",
   "dependencies": {
-    "date-fns": "^2.11.1",
-    "vue": "^2.6.11"
+    "date-fns": "^2.11.1"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",

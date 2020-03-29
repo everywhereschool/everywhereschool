@@ -1,5 +1,27 @@
 {% extends 'layouts/base.njk' %}
 
 {% block content %}
-    <stream v-for="(item, index) in items" v-bind:item="item" :key="index"></stream>
+{% for item in streams.items %}
+    <article class="card" data-status> <!-- Add class "soon" for upcoming streams, "live" for live streams -->
+        <div class="card-image">
+            <img src="{{ item.photo[0].url }}" alt="" loading="lazy" />
+        </div>
+        <time class="card-date" datetime="{{ item.startTime }}" data-end={{ item.endTime }}></time>
+        <h2><a rel="external" href="{{ item.link }}">{{ item.name }}</a></h2>
+        <p>By <a rel="external" href="{{ item.creatorLink }}">{{ item.creatorName }}</a>{% if item.platform %} on {{ item.platform }}{% endif %}</p>
+        <div class="meta">
+            <span class="subject">{{ item.subject }}</span>
+            <span class="separator"> • </span>
+            <span class="age-range">Ages {{ item.ageRange }}</span>
+        </div>
+        <div class="badge">
+            <span class="label">Done</span>
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                    <path d="M0,0 L60,0 C71.045695,0 80,8.954305 80,20 L80,80 L80,80 L0,0 Z"></path>
+                </g>
+            </svg>
+        </div>
+    </article>
+{% endfor %}
 {% endblock %}
