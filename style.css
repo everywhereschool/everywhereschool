@@ -183,16 +183,16 @@ footer {
 .text-content p {
   margin: 0 0 15px;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 30px;
 }
 
 .text-content h1 {
-  margin: 0 0 15px;
+  margin: 10px 0 15px;
   line-height: 34px;
 }
 
 .text-content h2 {
-  margin: 0 0 5px;
+  margin: 45px 0 5px;
   padding: 0;
   color: #00c4d5;
 }
