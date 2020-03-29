@@ -4,7 +4,10 @@
   "description": "Online live education for kids during the Covid-19 pandemic.",
   "main": "eleventy.config.js",
   "scripts": {
-    "build": "eleventy --config=eleventy.config.js",
+    "build:site": "eleventy --config=eleventy.config.js",
+    "build:js": "snowpack --include app.js --nomodule app.js --optimize",
+    "build": "npm run build:js && npm run build:site",
+    "prepare": "snowpack --include app.js",
     "start": "eleventy --serve --config=eleventy.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,7 +31,8 @@
   },
   "homepage": "https://github.com/greatislander/everywhereschool#readme",
   "dependencies": {
-    "date-fns": "^2.11.1"
+    "date-fns": "^2.11.1",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",

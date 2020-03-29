@@ -270,7 +270,7 @@ p {
   transition: all 0.1s ease;
 }
 
-.card.live:hover {
+.card[data-status="live"]:hover {
   box-shadow: 0 0 0 3px rgba(255, 0, 97, 1);
   transition: all 0.1s ease;
 }
@@ -282,10 +282,14 @@ p {
 .card-image {
   display: block;
   background: #eee;
-  background: url(images/example.jpg) no-repeat center center;
-  background-size: cover;
   width: 100%;
   height: 190px;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 .card h2 {
@@ -297,9 +301,9 @@ p {
   padding: 0;
 }
 
-.card.live h3,
-.card.live .meta,
-.card.live a {
+.card[data-status="live"] h3,
+.card[data-status="live"] .meta,
+.card[data-status="live"] a {
   color: #ff0061;
 }
 
@@ -331,18 +335,18 @@ p {
   transform: rotate(45deg) translateX(-50%) translateY(-25%);
 }
 
-.card.soon .badge {
+.card[data-status="soon"] .badge {
   display: block;
   color: #00C4D5
 }
 
-.card.live .badge {
+.card[data-status="live"] .badge {
   display: block;
   color: #FF0061;
   animation: pulse 2s infinite;
 }
 
-.card.done .badge {
+.card[data-status="done"] .badge {
   display: block;
   color: #58696B
 }
