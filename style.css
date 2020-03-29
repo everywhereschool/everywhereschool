@@ -311,35 +311,40 @@ p {
 }
 
 /* Badges */
-.badge-live {
-  display: block;
+.badge {
+  display: none;
   width: 80px;
   height: 80px;
   position: absolute;
   top: 0;
   right: 0;
-  background: url(images/badge-live.svg) no-repeat top left;
-  opacity: 0;
 }
 
-.badge-soon {
-  display: block;
-  width: 80px;
-  height: 80px;
+.badge .label {
+  text-transform: uppercase;
+  color: white;
   position: absolute;
-  top: 0;
-  right: 0;
-  background: url(images/badge-soon.svg) no-repeat top left;
-  opacity: 0;
+  font-weight: 800;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: rotate(45deg) translateX(-50%) translateY(-25%);
 }
 
-.card.live .badge-live {
-  opacity: 1;
+.card.soon .badge {
+  display: block;
+  color: #00C4D5
+}
+
+.card.live .badge {
+  display: block;
+  color: #FF0061;
   animation: pulse 2s infinite;
 }
 
-.card.soon .badge-soon {
-  opacity: 1;
+.card.done .badge {
+  display: block;
+  color: #58696B
 }
 
 @keyframes pulse {

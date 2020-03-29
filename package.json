@@ -28,9 +28,12 @@
   },
   "homepage": "https://github.com/greatislander/everywhereschool#readme",
   "dependencies": {
+    "date-fns": "^2.11.1"
+  },
+  "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "airtable": "^0.8.1",
-    "date-fns": "^2.11.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "snowpack": "^1.6.0"
   }
 }

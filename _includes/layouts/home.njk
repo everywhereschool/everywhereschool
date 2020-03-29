@@ -4,7 +4,7 @@
 {% for stream in streams.items %}
     <article class="card"> <!-- Add class "soon" for upcoming streams, "live" for live streams -->
         <div class="card-image" style="background-image: url({{ stream.photo[0].url }});"><br></div>
-        <div class="card-date">{{ stream.startTime }}</div><!-- TODO: human readable, use correct time zone -->
+        <time class="card-date" datetime="{{ stream.startTime }}">{{ stream.startTime }}</time><!-- TODO: human readable, use correct time zone -->
         <h2><a rel="external" href="{{ stream.link }}">{{ stream.name }}</a></h2>
         <p>By <a rel="external" href="{{ stream.creatorLink }}">{{ stream.creatorName }}</a>{% if stream.platform %} on {{ stream.platform }}{% endif %}</p>
         <div class="meta">
@@ -12,8 +12,14 @@
             <span class="separator"> • </span>
             <span class="age-range">Ages {{ stream.ageRange }}</span>
         </div>
-        <div class="badge-live"><br></div>
-        <div class="badge-soon"><br></div>
+        <div class="badge">
+            <span class="label">Done</span>
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                <g fill="currentColor">
+                    <path d="M0,0 L60,0 C71.045695,0 80,8.954305 80,20 L80,80 L80,80 L0,0 Z"></path>
+                </g>
+            </svg>
+        </div>
     </article>
 {% endfor %}
 {% endblock %}

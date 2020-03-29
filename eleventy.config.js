@@ -6,6 +6,7 @@ module.exports = eleventyConfig => {
         return format(new Date(dateTime), 'PPPppp');
     });
 
+    eleventyConfig.addPassthroughCopy('app.js');
     eleventyConfig.addPassthroughCopy('browserconfig.xml');
     eleventyConfig.addPassthroughCopy('humans.txt');
     eleventyConfig.addPassthroughCopy('fonts');
@@ -14,6 +15,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPassthroughCopy('robots.txt');
     eleventyConfig.addPassthroughCopy('site.webmanifest');
     eleventyConfig.addPassthroughCopy('style.css');
+    eleventyConfig.addPassthroughCopy('web_modules');
     
     return {
         passthroughFileCopy: true
