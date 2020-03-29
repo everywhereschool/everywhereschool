@@ -1,6 +1,0 @@
-{
-  "imports": {
-    "date-fns": "./date-fns.js",
-    "vue/dist/vue.esm.browser.js": "./vue/dist/vue.esm.browser.js"
-  }
-}
