@@ -342,6 +342,7 @@ p {
 .card[data-status="soon"] .badge {
   display: block;
   color: #00C4D5
+  animation: pulse 4s infinite;
 }
 
 .card[data-status="live"] .badge {
