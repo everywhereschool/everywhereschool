@@ -8,15 +8,18 @@ if (streams.length > 0) {
         const endTime = date.dataset.end;
         let formattedStartTime = `${format(new Date(startTime), 'PP')} at ${format(new Date(startTime), 'p')}`;
         date.innerText = formattedStartTime;
-        if (isPast(new Date(endTime))) { // Stream end time is in the past.
+        // Stream end time is in the past.
+        if (isPast(new Date(endTime))) {
             stream.dataset.status = 'done';
             stream.querySelector('.badge .label').innerText = 'done';
         }
-        if (isAfter(new Date(startTime), new Date()) && isBefore(new Date(startTime), addHours(new Date(), 1))) { // Stream start time is within the next hour.
+        // Stream start time is within the next hour.
+        if (isAfter(new Date(startTime), new Date()) && isBefore(new Date(startTime), addHours(new Date(), 1))) {
             stream.dataset.status = 'soon';
             stream.querySelector('.badge .label').innerText = 'soon';
         }
-        if (isAfter(new Date(), new Date(startTime)) && isBefore(new Date(), new Date(endTime))) { // Stream is live.
+        // Stream is live.
+        if (isAfter(new Date(), new Date(startTime)) && isBefore(new Date(), new Date(endTime))) {
             stream.dataset.status = 'live';
             stream.querySelector('.badge .label').innerText = 'live';
         }
