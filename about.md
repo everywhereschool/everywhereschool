@@ -15,7 +15,7 @@ Everywhere School is a small passion project, done for fun. Please be respectful
 Live streams, that come on at a predictable time, create a set schedule, which is often sorely needed for kids and parents not used to being at home. The presence of a real teacher, without editing, music, or graphics, giving a lesson in real time, helps create a more personal connection, which is what we need right now.
 
 ## Submit a Stream
-We welcome submissions of high-quality, family-friendly live streams to the site. You can submit an upcoming stream to our list via our [submission form](tbd). You can specify the date and time the stream will take place, and the best link to it. Please be aware that submissions usually take between a few hours and a day or so to through our approval process, so avoid sending streams that are already in progress. Not all submissions will be approved.
+We welcome submissions of high-quality, family-friendly live streams to the site. You can submit an upcoming stream to our list via our [submission form](https://airtable.com/shrFfyYXe9mhnzwPQ). You can specify the date and time the stream will take place, and the best link to it. Please be aware that submissions usually take between a few hours and a day or so to through our approval process, so avoid sending streams that are already in progress. Not all submissions will be approved.
 
 ## Contact
 
