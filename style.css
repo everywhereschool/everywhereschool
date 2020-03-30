@@ -366,6 +366,7 @@ p {
   position: absolute;
   top: 0;
   right: 0;
+  pointer-events: none;
 }
 
 .badge .label {
