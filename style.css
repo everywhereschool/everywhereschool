@@ -391,14 +391,6 @@ p {
   
 }
 
-.card[data-status="soon"] .badge .label {
-	  animation: pulse 4s infinite;
-	  
-	  @media (prefers-reduced-motion: reduce) {
-	    animation: none;
-	  }
-}
-
 .card[data-status="live"] .badge {
   display: block;
   color: var(--red);
