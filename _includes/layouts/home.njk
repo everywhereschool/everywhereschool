@@ -2,13 +2,13 @@
 
 {% block content %}
 {% for item in streams.items %}
-    <article class="card" data-status> <!-- Add class "soon" for upcoming streams, "live" for live streams -->
+    <article class="card card--stream" data-status>
         <div class="card-image">
             <img src="{{ item.photo[0].url }}" alt="" loading="lazy" />
         </div>
         <time class="card-date" datetime="{{ item.startTime }}" data-end={{ item.endTime }}></time>
         <h2><a rel="external" href="{{ item.link }}">{{ item.name }}</a></h2>
-        <p>By <a rel="external" href="{{ item.creatorLink }}">{{ item.creatorName }}</a>{% if item.platform %} on {{ item.platform }}{% endif %}</p>
+        <p>By <a rel="external" href="{{ item.creatorLink }}">{{ item.creatorName }}</a>{% if item.platform !== 'Web' %} on {{ item.platform }}{% endif %}</p>
         <div class="meta">
             <span class="subject">{{ item.subject }}</span>
         </div>

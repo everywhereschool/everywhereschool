@@ -109,3 +109,6 @@ _site
 
 # Snowpack
 web_modules
+
+# Local Netlify folder
+.netlify
