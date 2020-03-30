@@ -304,6 +304,10 @@ p {
   transition: all 0.1s ease;
 }
 
+.card[data-status="done"] {
+  display: none;
+}
+
 .card-image {
   display: block;
   background: #eee;
