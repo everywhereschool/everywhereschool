@@ -275,6 +275,7 @@ p {
 .card--title .subhead {
   color: var(--white);
   font-weight: 300;
+  margin: 0.625rem 0;
 }
 
 .card--title .subhead em {
