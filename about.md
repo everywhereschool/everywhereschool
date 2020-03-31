@@ -21,7 +21,7 @@ We welcome submissions of high-quality, family-friendly live streams to the site
 
 Feel free to get in touch for any reason. You can email us at [hello@everywhereschool.live](mailto:hello@everywhereschool.live). If you are the creator of a stream and wish for it not to be included, please email.
 
-We occasionally release project updates on twitter at [@everywhereschool](https://twitter.com/everywhereschool/).
+We occasionally release project updates on twitter at [@everywhereschl](https://twitter.com/everywhereschl/).
 
 ## Photo Credits
 
