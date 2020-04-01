@@ -3,9 +3,8 @@ title: About Everywhere School
 layout: 'layouts/page.njk'
 permalink: '/about/'
 ---
-In this time of isolation due to the COVID-19 pandemic, lots of kids are out of school. We believe that if our children can't be taught by familiar teachers in actual classrooms, one of the next best things is to learn from real people in real time, via video streaming.
 
-Everywhere School is a gateway to live, educational video content created by people and institutions around the internet. We don’t produce any streams ourselves: we simply curate our favourites, presenting what's live and what's scheduled for the hours ahead. These are engaging, inspiring and entertaining options for your family, listed on one easy-to-understand page.
+Everywhere School is a gateway to live, educational video content created by people and institutions around the internet created during the Covid-19 Pandemic. We don’t produce any streams ourselves: we simply curate our favourites, presenting what's live and what's scheduled for the hours ahead. These are engaging, inspiring and entertaining options for your family, listed on one easy-to-understand page.
 
 Everywhere School is a small passion project, done for fun. Please be respectful of our organizers and streamers. New events are added to Everywhere School's schedule once or twice a day. 
 
