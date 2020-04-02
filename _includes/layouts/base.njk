@@ -23,14 +23,9 @@
             {% set brandTag = 'p' %}
             {% endif %}
             <{{ brandTag }} class="brand">Everywhere School</{{ brandTag }}>
-        </header>
-        <div class="card card--title">
             <p class="subhead">A calendar of educational livestreams for kids during the COVID-19 pandemic</P>
-        </div>
-        <div class="card card--title">
             {% include 'partials/navigation.njk' %}
-        </div>
-        
+        </header>
         <main>
         {% block content %}
         {% endblock content %}
