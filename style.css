@@ -490,18 +490,26 @@ header .card a:hover {
    ========================================================================== */
 
 @media (max-width: 40rem) {
-	.card--brand, .card--subhead, .card--navigation {
+	.container {
+		text-align: center;
+	}
+	
+	.card--brand, .card--subhead, .card--navigation, .text-content {
 		height: auto;
+		width: 90%;
+		padding: 0.625rem;
 	}
 	
 	.card--subhead p.subhead {
-		padding: 0.625rem;
+		padding: 0;
+		margin: 0;
 		font-size: 1em;
 	}
 	
 	.card--navigation a {
 		font-size: 1em;
 		padding: 0.25rem;
+		margin: 0;
 	}
 }
 
