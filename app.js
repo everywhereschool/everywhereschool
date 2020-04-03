@@ -1,4 +1,4 @@
-import { format, isPast, isAfter, isBefore, isToday, isTomorrow, addHours } from "/web_modules/date-fns.js";
+import { format, isPast, isAfter, isBefore, isToday, isTomorrow, addHours, addDays } from "/web_modules/date-fns.js";
 
 const streams = document.querySelectorAll('article.card');
 if (streams.length > 0) {
@@ -28,6 +28,16 @@ if (streams.length > 0) {
                 stream.parentNode.insertBefore(heading, stream);
             }
             current = 'tomorrow';
+        }
+        // Stream is after tomorrow.
+        if (isAfter(new Date(startTime), addDays(new Date(), 1))) {
+            if (current !== 'later') {
+                const heading = document.createElement('h2');
+                heading.className = 'clearfix date-title';
+                heading.textContent = 'Coming Later';
+                stream.parentNode.insertBefore(heading, stream);
+            }
+            current = 'later';
         }
         // Stream end time is in the past.
         if (isPast(new Date(endTime))) {
