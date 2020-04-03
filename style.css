@@ -486,6 +486,26 @@ header .card a:hover {
 }
 
 /* ==========================================================================
+   Mobile Styles
+   ========================================================================== */
+
+@media (max-width: 40rem) {
+	.card--brand, .card--subhead, .card--navigation {
+		height: auto;
+	}
+	
+	.card--subhead p.subhead {
+		padding: 0.625rem;
+		font-size: 1em;
+	}
+	
+	.card--navigation a {
+		font-size: 1em;
+		padding: 0.25rem;
+	}
+}
+
+/* ==========================================================================
    Helper classes
    ========================================================================== */
 
