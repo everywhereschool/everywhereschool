@@ -506,6 +506,7 @@ header .card a:hover {
 	.text-content {
 		width: 90%;
 		margin: 0.625rem auto;
+		float: none;
 	}
 	
 	header .card.card--navigation {
