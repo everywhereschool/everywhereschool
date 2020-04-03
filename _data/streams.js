@@ -19,16 +19,6 @@ const compareStreams = (a, b) => {
 	return comparison;
 };
 
-const getPlatform = (url) => {
-	if (url.includes('vimeo')) {
-		return 'Vimeo';
-	}
-	if (url.includes('youtube') || url.includes('youtu.be')) {
-		return 'YouTube';
-	}
-	return false;
-}
-
 module.exports = async function() {
 	return new Promise((resolve, reject) => {
 		var streams = [];
@@ -42,7 +32,7 @@ module.exports = async function() {
 				const endTime = record.get('End Time');
 				const creatorName = record.get('Creator Name');
 				const creatorLink = record.get('Creator Link');
-				const platform = record.get('Platform') || getPlatform(link);
+				const platform = record.get('Platform') || false;
 				const subject = record.get('Subject');
 				const ageRange = record.get('Age Range');
 				streams.push({name, link, photo, startTime, endTime, creatorName, creatorLink, platform, subject, ageRange});
