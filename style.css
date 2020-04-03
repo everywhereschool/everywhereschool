@@ -497,10 +497,15 @@ header .card a:hover {
 	  text-align: center;
 	}
 	
-	.card--brand, .card--subhead, .card--navigation, .text-content {
+	.card--brand, .card--subhead, .card--navigation {
 		height: auto;
 		width: 90%;
 		padding: 0.625rem;
+	}
+	
+	.text-content {
+		width: 90%;
+		margin: 0.625rem auto;
 	}
 	
 	header .card.card--navigation {
