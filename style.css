@@ -308,11 +308,11 @@ header .card a:hover {
 }
 
 .card--brand:hover,
-.card--brand:focus-within,
-{
+.card--brand:focus-within {
   box-shadow: 0 0 0 0.1875rem var(--turquoise);
   transition: all 0.1s ease;
 }
+
 /* Stream Card */
 
 .card--stream:hover,
