@@ -161,6 +161,10 @@ body {
   margin: 1.875rem auto;
 }
 
+[role="banner"] {
+  width: 100%;
+}
+
 .card {
   float: left;
 }
@@ -257,12 +261,12 @@ p {
 
 /* Title Card */
 
-.card--title {
+header .card {
   background: var(--green-dark);
   padding: 1.25rem;
 }
 
-.card--title .brand {
+header .card .brand {
   color: var(--white);
   font-size: 2.1875rem;
   line-height: 1;
@@ -272,27 +276,45 @@ p {
   text-transform: uppercase;
 }
 
-.card--title .subhead {
+header .card .subhead {
   color: var(--white);
   font-weight: 300;
   margin: 0.625rem 0;
 }
 
-.card--title .subhead em {
+header .card .subhead em {
   color: var(--red);
   font-style: normal;
   font-weight: 800;
 }
 
-.card--title a {
+header .card a {
   color: var(--turquoise);
 }
 
-.card--title a:hover {
+header .card a:hover {
   color: var(--red);
 }
 
+/* Brand Card */
+.card--brand a::before {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 21.875rem;
+  width: 18.75rem;
+  left: 0;
+  top: 0;
+}
+
+.card--brand:hover,
+.card--brand:focus-within,
+{
+  box-shadow: 0 0 0 0.1875rem var(--turquoise);
+  transition: all 0.1s ease;
+}
 /* Stream Card */
+
 .card--stream:hover,
 .card--stream:focus-within {
   box-shadow: 0 0 0 0.1875rem var(--turquoise);
