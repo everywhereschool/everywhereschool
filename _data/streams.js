@@ -2,6 +2,7 @@ require('dotenv').config()
 
 const apiKey = process.env.AIRTABLE_API_KEY;
 const airtable = require('airtable');
+const Bottleneck = require('bottleneck');
 const base = new airtable({apiKey}).base('appIDPnCgGApCGUtF');
 
 const compareStreams = (a, b) => {
@@ -21,9 +22,12 @@ const compareStreams = (a, b) => {
 
 module.exports = async function() {
 	return new Promise((resolve, reject) => {
-		var streams = [];
+		const limiter = new Bottleneck({minTime: 1000 / 5});
+		const streams = [];
 
-		base('Streams').select().eachPage(function page(records, fetchNextPage) {
+		limiter.wrap(base('Streams').select({
+			filterByFormula: "IS_AFTER({End Time}, NOW())"
+		}).eachPage(function page(records, fetchNextPage) {
 			records.forEach(function(record) {
 				const name = record.get('Name');
 				const link = record.get('Link');
@@ -38,9 +42,12 @@ module.exports = async function() {
 				streams.push({name, link, photo, startTime, endTime, creatorName, creatorLink, platform, subject, ageRange});
 			});
 			fetchNextPage();
-			resolve({items: streams.sort(compareStreams)});
 		}, function done(err) {
-			if (err) { console.error(err); reject(error); }
-		});
+			if (err) {
+				console.error(err);
+				reject(error);
+			}
+			resolve({items: streams.sort(compareStreams)});
+		}));
 	});
 }
