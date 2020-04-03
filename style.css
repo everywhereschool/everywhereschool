@@ -208,6 +208,15 @@ footer {
   float: left;
 }
 
+h2.date-title {
+	clear: both;
+	text-align: left;
+	width: 100%;
+	font-size: 2em;
+	color: #00C4D5;
+}
+
+
 .text-content p {
   margin: 0 0 0.9375rem;
   font-size: 1.25rem;
@@ -255,6 +264,14 @@ p {
   transition: all 0.3s ease;
 }
 
+.card--brand, .card--subhead, .card--navigation {
+	height: 14rem;
+}
+
+.card--subhead p, .card--navigation a {
+	font-size: 1.5em;
+}
+
 .card a {
 	color: var(--turquoise-dark);
 }
@@ -263,7 +280,7 @@ p {
 
 header .card {
   background: var(--green-dark);
-  padding: 1.25rem;
+  padding: 1rem;
 }
 
 header .card .brand {

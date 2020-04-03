@@ -13,7 +13,7 @@ if (streams.length > 0) {
         if (isToday(new Date(startTime))) {
             if (!current) {
                 const heading = document.createElement('h2');
-                heading.className = 'clearfix';
+                heading.className = 'clearfix date-title';
                 heading.textContent = 'Today’s Livestreams';
                 stream.parentNode.insertBefore(heading, stream);
             }
@@ -23,7 +23,7 @@ if (streams.length > 0) {
         if (isTomorrow(new Date(startTime))) {
             if (current !== 'tomorrow') {
                 const heading = document.createElement('h2');
-                heading.className = 'clearfix';
+                heading.className = 'clearfix date-title';
                 heading.textContent = 'Tomorrow’s Livestreams';
                 stream.parentNode.insertBefore(heading, stream);
             }
