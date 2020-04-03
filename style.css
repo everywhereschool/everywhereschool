@@ -177,7 +177,7 @@ footer {
 
 .text-content {
   width: 38.8rem;
-  max-width: 100%;
+  max-width: 90%;
   background: var(--green-dark);
   border-radius: 1.25rem;
   margin: 0.625rem;
@@ -236,9 +236,7 @@ h2.date-title {
     float: none;
   }
   
-  .date-title {
-	  text-align: center;
-  }
+
 }
 
 /* ==========================================================================
@@ -492,11 +490,20 @@ header .card a:hover {
 @media (max-width: 40rem) {
 	.container {
 		text-align: center;
+		margin: 0;
+	}
+	
+	.date-title {
+	  text-align: center;
 	}
 	
 	.card--brand, .card--subhead, .card--navigation, .text-content {
 		height: auto;
 		width: 90%;
+		padding: 0.625rem;
+	}
+	
+	header .card.card--navigation {
 		padding: 0.625rem;
 	}
 	
