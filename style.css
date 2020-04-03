@@ -175,31 +175,9 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 80rem) {
-  .container {
-    max-width: 60rem;
-  }
-}
-
-@media (max-width: 60rem) {
-  .container {
-    max-width: 40rem;
-  }
-}
-
-@media (max-width: 40rem) {
-  .container {
-    max-width: 31.25rem;
-  }
-
-  .card {
-    float: none;
-  }
-}
-
 .text-content {
-  width: 100%;
-  max-width: 40rem;
+  width: 38.8rem;
+  max-width: 100%;
   background: var(--green-dark);
   border-radius: 1.25rem;
   margin: 0.625rem;
@@ -234,6 +212,33 @@ h2.date-title {
   margin: 2.8125rem 0 0.3125rem;
   padding: 0;
   color: var(--turquoise);
+}
+
+
+@media (max-width: 80rem) {
+  .container {
+    max-width: 60rem;
+  }
+}
+
+@media (max-width: 60rem) {
+  .container {
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .container {
+    max-width: 31.25rem;
+  }
+
+  .card {
+    float: none;
+  }
+  
+  .date-title {
+	  text-align: center;
+  }
 }
 
 /* ==========================================================================
