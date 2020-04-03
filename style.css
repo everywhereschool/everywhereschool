@@ -270,14 +270,20 @@ p {
 	height: 14rem;
 }
 
-.card--subhead p {
+.card--subhead p.subhead {
 	font-size: 1.5em;
-	margin: 2.5rem 0;
+	padding: 1.5rem 0.5rem 0;
+}
+
+.card--navigation {
+	padding: 3rem;
 }
 
 .card--navigation a {
 	font-size: 1.5em;
 	padding: 1rem 0;
+	float: left;
+	width: 100%;
 }
 
 .card a {
