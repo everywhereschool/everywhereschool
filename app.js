@@ -1,4 +1,4 @@
-import { format, isPast, isAfter, isBefore, isToday, isTomorrow, addHours, addDays } from "/web_modules/date-fns.js";
+import { format, isPast, isAfter, isBefore, isToday, isTomorrow, addHours, endOfTomorrow } from "/web_modules/date-fns.js";
 
 const streams = document.querySelectorAll('article.card');
 if (streams.length > 0) {
@@ -30,7 +30,7 @@ if (streams.length > 0) {
             current = 'tomorrow';
         }
         // Stream is after tomorrow.
-        if (isAfter(new Date(startTime), addDays(new Date(), 2))) {
+        if (isAfter(new Date(startTime), endOfTomorrow())) {
             if (current === 'tomorrow') {
                 const heading = document.createElement('h2');
                 heading.className = 'clearfix date-title';
