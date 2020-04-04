@@ -152,6 +152,13 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100vh;
+  
+  background: 	linear-gradient(135deg, #1B5257 25%, transparent 25%) -50px 0,
+				linear-gradient(225deg, #1B5257 25%, transparent 25%) -50px 0,
+				linear-gradient(315deg, #1B5257 25%, transparent 25%),
+				linear-gradient(45deg, #1B5257 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-color: #19484C;
 }
 
 .container {
