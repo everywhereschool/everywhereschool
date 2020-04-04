@@ -7,8 +7,8 @@
             <img src="{{ item.photo[0].url }}" alt="" loading="lazy" />
         </div>
         <time class="card-date" datetime="{{ item.startTime }}" data-end={{ item.endTime }}></time>
-        <h2><a rel="external" href="{{ item.link }}" target="_blank">{{ item.name }}<span class="sr-only"> (opens in new window)</span></a></h2>
-        <p>By <a rel="external" href="{{ item.creatorLink }}">{{ item.creatorName }}</a>{% if item.platform !== 'Web' %} on {{ item.platform }}{% endif %}</p>
+        <h2><a rel="external noopener noreferrer" href="{{ item.link }}" target="_blank">{{ item.name }}<span class="sr-only"> (opens in new window)</span></a></h2>
+        <p>By <a rel="external noopener noreferrer" href="{{ item.creatorLink }}">{{ item.creatorName }}</a>{% if item.platform !== 'Web' %} on {{ item.platform }}{% endif %}</p>
         <div class="meta">
             <span class="subject">{{ item.subject }}</span>
         </div>
