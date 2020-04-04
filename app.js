@@ -21,7 +21,7 @@ if (streams.length > 0) {
         }
         // Stream is tomorrow.
         if (isTomorrow(new Date(startTime))) {
-            if (current !== 'tomorrow') {
+            if (current === 'today') {
                 const heading = document.createElement('h2');
                 heading.className = 'clearfix date-title';
                 heading.textContent = 'Tomorrow’s Livestreams';
@@ -30,8 +30,8 @@ if (streams.length > 0) {
             current = 'tomorrow';
         }
         // Stream is after tomorrow.
-        if (isAfter(new Date(startTime), addDays(new Date(), 1))) {
-            if (current !== 'later') {
+        if (isAfter(new Date(startTime), addDays(new Date(), 2))) {
+            if (current === 'tomorrow') {
                 const heading = document.createElement('h2');
                 heading.className = 'clearfix date-title';
                 heading.textContent = 'Coming Later';
