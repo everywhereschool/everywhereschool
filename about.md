@@ -16,7 +16,9 @@ Live streams, that come on at a predictable time, create a set schedule, which i
 
 ## Contact
 
-Contact us on twitter at [@everywhereschl](https://twitter.com/everywhereschl/).
+Email us for any reason at [hello@everywhereschool.live](mailto:hello@everywhereschool.live)
+
+Follow us on twitter at [@everywhereschl](https://twitter.com/everywhereschl/).
 
 ## Free Software License
 
