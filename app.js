@@ -1,7 +1,6 @@
 import { format, isPast, isAfter, isBefore, isToday, isTomorrow, addHours, endOfTomorrow } from "/web_modules/date-fns.js";
 
-const streams = document.querySelectorAll('article.card');
-if (streams.length > 0) {
+function groupStreams(streams) {
     let current = false;
     streams.forEach(function(stream) {
         const date = stream.querySelector('.card-date');
@@ -39,6 +38,17 @@ if (streams.length > 0) {
             }
             current = 'later';
         }
+    });
+}
+
+function updateStreams() {
+    const streams = document.querySelectorAll('article.card');
+
+    streams.forEach(function(stream) {
+        const date = stream.querySelector('.card-date');
+        const startTime = date.getAttribute('datetime');
+        const endTime = date.dataset.end;
+        
         // Stream end time is in the past.
         if (isPast(new Date(endTime))) {
             stream.dataset.status = 'done';
@@ -56,3 +66,17 @@ if (streams.length > 0) {
         }
     });
 }
+
+function timedUpdate() {
+    updateStreams();
+    setTimeout(timedUpdate, 60000);
+}
+
+const streams = document.querySelectorAll('article.card');
+
+if (streams.length > 0) {
+    groupStreams(streams);
+    timedUpdate();
+}
+
+
