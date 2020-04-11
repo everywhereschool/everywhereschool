@@ -23,55 +23,55 @@ function groupStreams(streams) {
         if (isToday(new Date(startTime))) {
             if (!offset) {
                 insertHeading(stream, 'Today’s Livestreams');
-                offset = 0;
+                offset = '0';
             }
         }
         // Stream is tomorrow.
         if (isTomorrow(new Date(startTime))) {
-            if (offset === 0) {
+            if (offset === '0') {
                 insertHeading(stream, 'Tomorrow’s Livestreams');
-                offset = 1;
+                offset = '1';
             }
         }
 
         // Stream is in two days.
         if (isAfter(new Date(startTime), endOfTomorrow()) && isBefore(new Date(startTime), addDays(endOfTomorrow(), 1))) {
-            if (offset === 1) {
+            if (offset === '1') {
                 insertHeading(stream, `${format(new Date(startTime), 'EEEE')}’s Livestreams`);
-                offset = 2;
+                offset = '2';
             }
         }
         // Stream is in three days.
         if (isAfter(new Date(startTime), addDays(endOfTomorrow(), 1)) && isBefore(new Date(startTime), addDays(endOfTomorrow(), 2))) {
-            if (offset === 2) {
+            if (offset === '2') {
                 insertHeading(stream, `${format(new Date(startTime), 'EEEE')}’s Livestreams`);
-                offset = 3;
+                offset = '3';
             }
         }
         // Stream is in four days.
         if (isAfter(new Date(startTime), addDays(endOfTomorrow(), 2)) && isBefore(new Date(startTime), addDays(endOfTomorrow(), 3))) {
-            if (offset === 3) {
+            if (offset === '3') {
                 insertHeading(stream, `${format(new Date(startTime), 'EEEE')}’s Livestreams`);
-                offset = 4;
+                offset = '4';
             }
         }
         // Stream is in five days.
         if (isAfter(new Date(startTime), addDays(endOfTomorrow(), 3)) && isBefore(new Date(startTime), addDays(endOfTomorrow(), 4))) {
-            if (offset === 4) {
+            if (offset === '4') {
                insertHeading(stream, `${format(new Date(startTime), 'EEEE')}’s Livestreams`);
-               offset = 5;
+               offset = '5';
             }
         }
         // Stream is in six days.
         if (isAfter(new Date(startTime), addDays(endOfTomorrow(), 4)) && isBefore(new Date(startTime), addDays(endOfTomorrow(), 5))) {
-            if (offset === 5) {
+            if (offset === '5') {
                 insertHeading(stream, `${format(new Date(startTime), 'EEEE')}’s Livestreams`);
-                offset = 6;
+                offset = '6';
             }
         }
         // Stream is next week.
         if (isAfter(new Date(startTime), addDays(endOfTomorrow(), 5)) && isBefore(new Date(startTime), addDays(endOfTomorrow(), 13))) {
-            if (offset === 6) {
+            if (offset === '6') {
                 insertHeading(stream, 'Next Week’s Livestreams');
                 offset = 'nextweek';
             }
