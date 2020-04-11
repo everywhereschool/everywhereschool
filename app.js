@@ -1,42 +1,87 @@
-import { format, isPast, isAfter, isBefore, isToday, isTomorrow, addHours, endOfTomorrow } from "/web_modules/date-fns.js";
+import { format, isPast, isAfter, isBefore, isToday, isTomorrow, addHours, addDays, endOfTomorrow } from "/web_modules/date-fns.js";
 
-function groupStreams(streams) {
-    let current = false;
+function insertHeading(stream, label) {
+    const heading = document.createElement('h2');
+    heading.className = 'clearfix date-title';
+    heading.textContent = label;
+    stream.parentNode.insertBefore(heading, stream);
+}
+
+function formatDates(streams) {
     streams.forEach(function(stream) {
         const date = stream.querySelector('.card-date');
         const startTime = date.getAttribute('datetime');
-        const endTime = date.dataset.end;
-        let formattedStartTime = `${format(new Date(startTime), 'PP')} at ${format(new Date(startTime), 'p')}`;
-        date.innerText = formattedStartTime;
+        date.innerText = `${format(new Date(startTime), 'PP')} at ${format(new Date(startTime), 'p')}`;
+    });
+}
+
+function groupStreams(streams) {
+    let offset = false;
+    streams.forEach(function(stream) {
+        const startTime = stream.querySelector('.card-date').getAttribute('datetime');
         // Stream is today.
         if (isToday(new Date(startTime))) {
-            if (!current) {
-                const heading = document.createElement('h2');
-                heading.className = 'clearfix date-title';
-                heading.textContent = 'Today’s Livestreams';
-                stream.parentNode.insertBefore(heading, stream);
+            if (!offset) {
+                insertHeading(stream, 'Today’s Livestreams');
+                offset = 0;
             }
-            current = 'today';
         }
         // Stream is tomorrow.
         if (isTomorrow(new Date(startTime))) {
-            if (current === 'today') {
-                const heading = document.createElement('h2');
-                heading.className = 'clearfix date-title';
-                heading.textContent = 'Tomorrow’s Livestreams';
-                stream.parentNode.insertBefore(heading, stream);
+            if (offset === 0) {
+                insertHeading(stream, 'Tomorrow’s Livestreams');
+                offset = 1;
             }
-            current = 'tomorrow';
         }
-        // Stream is after tomorrow.
-        if (isAfter(new Date(startTime), endOfTomorrow())) {
-            if (current === 'tomorrow') {
-                const heading = document.createElement('h2');
-                heading.className = 'clearfix date-title';
-                heading.textContent = 'Coming Later';
-                stream.parentNode.insertBefore(heading, stream);
+
+        // Stream is in two days.
+        if (isAfter(new Date(startTime), endOfTomorrow()) && isBefore(new Date(startTime), addDays(endOfTomorrow(), 1))) {
+            if (offset === 1) {
+                insertHeading(stream, `${format(new Date(startTime), 'EEEE')}’s Livestreams`);
+                offset = 2;
             }
-            current = 'later';
+        }
+        // Stream is in three days.
+        if (isAfter(new Date(startTime), addDays(endOfTomorrow(), 1)) && isBefore(new Date(startTime), addDays(endOfTomorrow(), 2))) {
+            if (offset === 2) {
+                insertHeading(stream, `${format(new Date(startTime), 'EEEE')}’s Livestreams`);
+                offset = 3;
+            }
+        }
+        // Stream is in four days.
+        if (isAfter(new Date(startTime), addDays(endOfTomorrow(), 2)) && isBefore(new Date(startTime), addDays(endOfTomorrow(), 3))) {
+            if (offset === 3) {
+                insertHeading(stream, `${format(new Date(startTime), 'EEEE')}’s Livestreams`);
+                offset = 4;
+            }
+        }
+        // Stream is in five days.
+        if (isAfter(new Date(startTime), addDays(endOfTomorrow(), 3)) && isBefore(new Date(startTime), addDays(endOfTomorrow(), 4))) {
+            if (offset === 4) {
+               insertHeading(stream, `${format(new Date(startTime), 'EEEE')}’s Livestreams`);
+               offset = 5;
+            }
+        }
+        // Stream is in six days.
+        if (isAfter(new Date(startTime), addDays(endOfTomorrow(), 4)) && isBefore(new Date(startTime), addDays(endOfTomorrow(), 5))) {
+            if (offset === 5) {
+                insertHeading(stream, `${format(new Date(startTime), 'EEEE')}’s Livestreams`);
+                offset = 6;
+            }
+        }
+        // Stream is next week.
+        if (isAfter(new Date(startTime), addDays(endOfTomorrow(), 5)) && isBefore(new Date(startTime), addDays(endOfTomorrow(), 13))) {
+            if (offset === 6) {
+                insertHeading(stream, 'Next Week’s Livestreams');
+                offset = 'nextweek';
+            }
+        }
+        // Stream is later.
+        if (isAfter(new Date(startTime), addDays(endOfTomorrow(), 13))) {
+            if (offset === 'nextweek') {
+                insertHeading(stream, 'Future Livestreams');
+                offset = 'later';
+            }
         }
     });
 }
@@ -75,6 +120,7 @@ function timedUpdate() {
 const streams = document.querySelectorAll('article.card');
 
 if (streams.length > 0) {
+    formatDates(streams);
     groupStreams(streams);
     timedUpdate();
 }
