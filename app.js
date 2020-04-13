@@ -26,9 +26,10 @@ function groupStreams(streams) {
                 offset = '0';
             }
         }
+
         // Stream is tomorrow.
         if (isTomorrow(new Date(startTime))) {
-            if (offset === '0') {
+            if (!offset || offset === '0') {
                 insertHeading(stream, 'Tomorrow’s Livestreams');
                 offset = '1';
             }
