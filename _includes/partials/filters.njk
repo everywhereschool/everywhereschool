@@ -1,0 +1,21 @@
+<div class="card card--filters">
+    <h2>Filter Streams</h2>
+    <p>
+    <label for="subject">Filter by Subject:</label>
+    <select id="subject" name="subject">
+        <option value="" selected>--</option>
+        {% for value in streams.subjects %}
+        <option value="{{ value }}">{{ value }}</option>
+        {% endfor %}
+    </select>
+    </p>
+    <p>
+    <label for="ages">Filter by Age:</label>
+    <select id="ages" name="ages">
+        <option value="" selected>--</option>
+        {% for value in streams.ageRanges %}
+        <option value="{{ value }}">{{ value }}</option>
+        {% endfor %}
+    </select>
+    </p>    
+</div>

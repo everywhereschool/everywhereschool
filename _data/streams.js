@@ -47,7 +47,20 @@ module.exports = async function() {
 				console.error(err);
 				reject(error);
 			}
-			resolve({items: streams.sort(compareStreams)});
+
+			const subjects = streams.reduce((accumulator, currentStream) => {				
+				if (!accumulator.includes(currentStream.subject)) {
+					accumulator.push(currentStream.subject);
+				}
+		
+				return accumulator;
+			}, []);
+
+			resolve({
+				items: streams.sort(compareStreams),
+				ageRanges: ["3+", "6+", "9+", "12+", "Teens+", "All Ages"],
+				subjects: subjects.sort()
+			});
 		}));
 	});
 }

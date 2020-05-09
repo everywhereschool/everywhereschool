@@ -282,10 +282,6 @@ p {
   transition: all 0.3s ease;
 }
 
-.card--brand, .card--subhead, .card--navigation {
-	height: 14rem;
-}
-
 .card--subhead p.subhead {
 	font-size: 1.5em;
 	padding: 1.5rem 0.5rem 0;
@@ -310,6 +306,7 @@ header .card.card--navigation {
 
 header .card {
   background: var(--green-dark);
+  height: 14rem;
   padding: 1rem;
 }
 
@@ -360,6 +357,35 @@ header .card a:hover {
   transition: all 0.1s ease;
 }
 
+/* Filters Card */
+.card.card--filters {
+  padding: 1.5rem 0.5rem 0;
+}
+
+.card.card--filters h2 {
+  font-size: 1.5em;
+  color: var(--white);
+}
+
+.card.card--filters p {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--white);
+  padding: 1.5rem 0 0;
+}
+
+.card.card--filters label {
+  margin-right: 0.5rem;
+  text-align: right;
+  width: calc(60% - 0.5rem);
+}
+
+.card.card-filters select {
+  width: 40%;
+}
+
 /* Stream Card */
 
 .card--stream:hover,
@@ -374,7 +400,8 @@ header .card a:hover {
   transition: all 0.1s ease;
 }
 
-.card[data-status="done"] {
+.card[data-status="done"],
+.card[hidden] {
   display: none;
 }
 
