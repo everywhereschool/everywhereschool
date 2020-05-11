@@ -537,8 +537,8 @@ header .card a:hover {
 	  text-align: center;
 	}
 	
-	.card--brand, .card--subhead, .card--navigation {
-		height: auto;
+	.card--brand, .card--subhead, .card--navigation, .card--filters {
+		height: auto !important;
 		width: 90%;
 		padding: 0.625rem;
 	}
