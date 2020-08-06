@@ -33,6 +33,9 @@
             <div class="card card--navigation">
             {% include 'partials/navigation.njk' %}
             </div>
+            {% if page.url === '/' %}
+            {% include 'partials/filters.njk' %}
+            {% endif %}
         </header>
         <main>
         {% block content %}
