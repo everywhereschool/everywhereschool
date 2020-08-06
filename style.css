@@ -359,7 +359,7 @@ header .card a:hover {
 
 /* Filters Card */
 .card.card--filters {
-  padding: 1.5rem 0.5rem 0;
+  padding: 1.5rem 0.5rem;
 }
 
 .card.card--filters h2 {
@@ -382,7 +382,7 @@ header .card a:hover {
   width: calc(60% - 0.5rem);
 }
 
-.card.card-filters select {
+.card.card--filters select {
   width: 40%;
 }
 
